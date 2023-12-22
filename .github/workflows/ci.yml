@@ -92,11 +92,18 @@ jobs:
         run: AVALANCHEGO_BUILD_PATH=/tmp/e2e-test/avalanchego DATA_DIR=/tmp/e2e-test/data ./scripts/run_ginkgo.sh
       - name: Run Warp E2E Tests
         shell: bash
-        run: AVALANCHEGO_BUILD_PATH=/tmp/e2e-test/avalanchego DATA_DIR=/tmp/e2e-test/data ./scripts/run_ginkgo_warp.sh
-      - name: Upload Artifact
+        run: AVALANCHEGO_BUILD_PATH=/tmp/e2e-test/avalanchego ./scripts/run_ginkgo_warp.sh
+      - name: Upload e2e Artifact
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: subnet-evm-e2e-logs
           path: /tmp/network-runner-root-data*/
           retention-days: 5
+      - name: Upload tmpnet network dir for warp testing
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: warp-tmpnet-data
+          path: ~/.tmpnet/networks/1000
+          if-no-files-found: error
