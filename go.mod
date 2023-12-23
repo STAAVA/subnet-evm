@@ -4,7 +4,6 @@ go 1.20
 
 require (
 	github.com/VictoriaMetrics/fastcache v1.10.0
-	github.com/ava-labs/avalanche-network-runner v1.7.4-0.20231127162258-2f3ceed8ae4b
 	github.com/ava-labs/avalanchego v1.10.18-rc.0
 	github.com/cespare/cp v0.1.0
 	github.com/cockroachdb/pebble v0.0.0-20230209160836-829675f94811
@@ -114,7 +113,6 @@ require (
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/nbutton23/zxcvbn-go v0.0.0-20180912185939-ae427f1e4c1d // indirect
 	github.com/opentracing/opentracing-go v1.1.0 // indirect
-	github.com/otiai10/copy v1.11.0 // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.5 // indirect
 	github.com/peterh/liner v1.1.1-0.20190123174540-a2c9a5303de7 // indirect
@@ -146,7 +144,6 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.26.0 // indirect
 	golang.org/x/exp v0.0.0-20231127185646-65229373498e // indirect
-	golang.org/x/mod v0.14.0 // indirect
 	golang.org/x/net v0.19.0 // indirect
 	golang.org/x/term v0.15.0 // indirect
 	golang.org/x/tools v0.16.0 // indirect
@@ -162,4 +159,4 @@ require (
 	rsc.io/tmplfunc v0.0.3 // indirect
 )
 
-replace github.com/ava-labs/avalanchego => github.com/ava-labs/avalanchego v1.10.18-0.20231223011330-c500f6a5a91d
+replace github.com/ava-labs/avalanchego => github.com/ava-labs/avalanchego v1.10.18-0.20231223041851-6a97a1e42458
